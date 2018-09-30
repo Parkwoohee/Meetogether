@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/title_home" />
+
+        <item
+            android:id="@+id/nav_root"
+            android:title="@string/title_root" />
+
+        <item
+            android:id="@+id/nav_notice"
+            android:title="@string/title_notice"/>
+
+        <item
+            android:id="@+id/nav_customer"
+            android:title="@string/title_customer" />
+
+        <item
+            android:id="@+id/nav_qna"
+            android:title="@string/title_qna" />
+
+        <item
+            android:id="@+id/nav_info"
+            android:title="@string/title_info" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/title_logout" />
+    </group>
+
+</menu>
