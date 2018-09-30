@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/default_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/Toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meetogether"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textSize="20sp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/room_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pic2"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/add_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진 추가하기"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimaryDark"/>
+
+    </FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="방제목"
+                    android:textSize="18sp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_marginBottom="6dp"/>
+
+                <EditText
+                    android:id="@+id/room_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="인원수"
+                    android:textSize="18sp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_marginBottom="6dp"/>
+
+                <!--<Spinner android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listView"/>-->
+
+                <EditText
+                    android:id="@+id/room_people_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="성별"
+                    android:textSize="18sp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_marginBottom="6dp"/>
+<!--
+                <EditText
+                    android:id="@+id/room_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+-->
+                <RadioGroup
+                    android:id="@+id/room_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/radio_m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="남자"
+                        android:checked="true"
+                        android:layout_marginRight="16dp"/>
+
+
+                    <RadioButton
+                        android:id="@+id/radio_wm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="여자"
+                        android:layout_marginLeft="16dp"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="영어수준"
+                    android:textSize="18sp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_marginBottom="6dp"/>
+
+                <EditText
+                    android:id="@+id/room_english_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="여행주요지역"
+                    android:textSize="18sp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_marginBottom="6dp"/>
+
+                <EditText
+                    android:id="@+id/room_main_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="여행경비"
+                    android:textSize="18sp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:layout_marginBottom="6dp"/>
+
+                <EditText
+                    android:id="@+id/room_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <!--
+                            <Button
+                                android:id="@+id/add_route_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_marginLeft="12dp"
+                                android:background="@drawable/btn_blink_dark"
+                                android:text="경로 지정하기"
+                                android:textColor="@color/colorPrimaryDark"/>
+            -->
+            <Button
+                android:id="@+id/add_room_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/btn_full_dark"
+                android:text="등록하기"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
